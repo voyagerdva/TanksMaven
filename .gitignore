@@ -1,0 +1,3 @@
+# Project exclude paths
+/TankClient/target/
+/TankServer/target/
