@@ -9,8 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nn.ru</groupId>
     <artifactId>TankClient</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>nn.ru</groupId>
+            <artifactId>TankServer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
