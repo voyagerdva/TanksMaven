@@ -1,5 +1,7 @@
 package nn.ru.model;
 
+import dto.DTOServer;
+
 import java.awt.event.KeyEvent;
 
 public class Calculate {
@@ -10,7 +12,7 @@ public class Calculate {
     public Calculate() {
     }
 
-    public DTO calcCoordinateByKeyEventPressed(DTO dto) {
+    public DTOServer calcCoordinateByKeyEventPressed(DTOServer dto) {
         if (dto.keyCode == KeyEvent.VK_LEFT) {
             dto.A = dto.A - deltaA;
             return dto;

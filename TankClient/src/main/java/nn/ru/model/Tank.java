@@ -1,8 +1,11 @@
 package nn.ru.model;
 
+import dto.DTOClient;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
@@ -106,10 +109,10 @@ public class Tank {
 
     //========================================================================
     public void keyEventPressed(KeyEvent e) throws Exception {
-        DTO dtoOut = new DTO(this.A);
+        DTOClient dtoOut = new DTOClient(this.A);
         dtoOut.keyCode = e.getKeyCode();
 
-        DTO dtoIn = client.run(this, dtoOut);
+        DTOClient dtoIn = client.run(this, dtoOut);
 
         this.A = dtoIn.A;
         this.deltaX = dtoIn.deltaX;

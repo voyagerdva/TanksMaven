@@ -1,10 +1,15 @@
 package nn.ru.model;
 
-import java.io.*;
+import dto.DTOClient;
+
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 
 public class Client {
-    public DTO  run(Tank tank, DTO dtoOut) throws Exception {
+    public DTOClient run(Tank tank, DTOClient dtoOut) throws Exception {
         Socket socket = new Socket("localhost", 4011);
         System.out.println("### socket: " + socket);
 
@@ -17,7 +22,7 @@ public class Client {
 
             oos.writeObject(dtoOut);
 
-            DTO dtoIn = (DTO) ois.readObject();
+            DTOClient dtoIn = (DTOClient) ois.readObject();
             tank.A = dtoIn.A;
             System.out.printf("приняли в ответ dtoIn.deltaX = %s\n", dtoIn.deltaX);
             System.out.printf("приняли в ответ dtoIn.deltaY = %s\n", dtoIn.deltaY);

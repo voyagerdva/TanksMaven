@@ -8,9 +8,10 @@ import java.io.IOException;
 import static java.lang.Thread.sleep;
 import static nn.ru.model.Constants.*;
 
-public class AppClientRunner {
+public class AppClientRun {
     public static void main(String[] args) throws InterruptedException, IOException {
 
+//        System.out.println(AppServerRun.getInfo());
 
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice[] gs = ge.getScreenDevices();

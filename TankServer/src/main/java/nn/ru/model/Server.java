@@ -1,5 +1,7 @@
 package nn.ru.model;
 
+import dto.DTOServer;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -24,11 +26,11 @@ public class Server {
                     ObjectOutputStream oos = new ObjectOutputStream(out);
                     ObjectInputStream ois = new ObjectInputStream(in);
 
-                    DTO dtoIn = (DTO) ois.readObject();
+                    DTOServer dtoIn = (DTOServer) ois.readObject();
                     System.out.println();
                     System.out.printf("Приняли клавишу с кодом dtoIn.keyCode: %s\n", dtoIn.keyCode);
 
-                    DTO dtoOut = calculate.calcCoordinateByKeyEventPressed(dtoIn);
+                    DTOServer dtoOut = calculate.calcCoordinateByKeyEventPressed(dtoIn);
 
                     System.out.printf("отправляем в ответ угол поворота ... %s\n", dtoOut.A);
                     oos.writeObject(dtoOut);
