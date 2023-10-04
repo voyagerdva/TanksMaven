@@ -60,3 +60,6 @@ Exception in thread "AWT-EventQueue-0" java.lang.NoClassDefFoundError: dto/DTOCl
 Caused by: java.lang.ClassNotFoundException: dto.DTOClient
 	... 48 more
 Caused by: java.lang.ClassNotFoundException: dto.DTOClient
+
+
+8) Запуски приложений выполнялись из Идеи (не джарки)
